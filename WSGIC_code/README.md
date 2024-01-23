@@ -1,4 +1,4 @@
-# Show, Tell and Locate: Top-Down Weakly Supervised Grounded Image
+# Top-Down Framework for Weakly Supervised Grounded Image
 
 ## Requirements
 - Python 3.8
