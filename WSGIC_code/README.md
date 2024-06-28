@@ -8,7 +8,7 @@
 1. Download [coco-caption] and [cider] evaluation from https://github.com/ruotianluo/coco-caption/tree/dda03fc714f1fcc8e2696a8db0d469d99b881411 and https://github.com/ruotianluo/cider/tree/dbb3960165d86202ed3c417b412a000fc8e717f3 
 2. download and place the [Flickr30k reference file](https://entuedu-my.sharepoint.com/:u:/g/personal/n1806230d_e_ntu_edu_sg/ERf4vteh7AdMmpR5jCc2ve4BNmZJ8EfY8LJVe4D3KCR4oQ?e=8qNj1W) under coco-caption/annotations. Also, download [Stanford CoreNLP 3.9.1](https://stanfordnlp.github.io/CoreNLP/history.html) for grounding evaluation and place the uncompressed folder under the tools/ directory.
 3. Download the *Flickr30k-Entities* raw RGB image form http://hockenmaier.cs.illinois.edu/DenotationGraph/ and place it to data/.
-4. Download the relation classes label from https://drive.google.com/file/d/1ZDST8PXhoFb_x_oZxlTSA7TPJus_F1xe/view?usp=share_link
+4. Download the relation classes label from [https://drive.google.com/file/d/1ZDST8PXhoFb_x_oZxlTSA7TPJus_F1xe/view?usp=share_link](https://drive.google.com/file/d/1bJycdOr7JenVo_VDcKPRYNuRHM0qW_Rt/view?usp=sharing)
 5. Download the preprocessd dataset from this [link](https://entuedu-my.sharepoint.com/:u:/g/personal/n1806230d_e_ntu_edu_sg/Ea0HzFuNDGNPmmTxBTVjfbwBp9ZGhIAyyQylATXV735eUA?e=yEEaI6) and extract it to data/.
 6. For *Flickr30k-Entities*, please download bottom-up visual feature extracted by Anderson's [extractor](https://github.com/peteanderson80/bottom-up-attention) (Zhou's [extractor](https://github.com/facebookresearch/grounded-video-description/tree/flickr_branch)) from this [link](https://entuedu-my.sharepoint.com/:u:/g/personal/n1806230d_e_ntu_edu_sg/EWKJu8TLXtVPu5h3EnNRWo4BfWs_3WIBfoXXJPWFoIS5kA?e=IFSR8Q) ( [link](https://entuedu-my.sharepoint.com/:u:/g/personal/n1806230d_e_ntu_edu_sg/ES446ZSwHCZAqiPjXxXW2twB_jMa_GmAiyuOUnEsNSWeUw?e=6u3pnF)) and place the uncompressed folders  under data/flickrbu/. 
 
@@ -30,6 +30,3 @@ python train_WSGIC.py --id sc-WSGIC --caption_model GIC --image_path data/flickr
 python eval.py  --model  ./log/WSGIC/model.pth    --infos_path   ./log/WSGIC/infos_WSGIC.pkl  --dataset flickr   --split  train  --eval_att  1   --att_supervise  1  --batch_size 1  --beam_size  1 --thresholding 0.05
 python eval.py  --model  ./log/sc_WSGIC/model.pth    --infos_path   ./log/sc_WSGIC/infos_WSGIC.pkl  --dataset flickr   --split  train  --eval_att  1   --att_supervise  1  --batch_size 1  --beam_size  1 --thresholding 0.06
 
-```
-the code will be released upon publications
-```
